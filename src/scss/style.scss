@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   Stylesheet for all browsers
+
+   Never add styles directly to this file - set up imports
+   Style guide: https://github.com/necolas/idiomatic-css
+   ========================================================================== */
+
+@import "reset";
+@import "reveal";
+@import "config";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 24px;
+
+    background: $black;
+
+    &:before,
+    &:after {
+        content: '';
+
+        position: absolute;
+
+        display: block;
+    }
+
+    &:after {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        border: 10px solid $yellow;
+    }
+
+    &:before {
+        top: 12px;
+        right: 12px;
+        bottom: 12px;
+        left: 12px;
+
+        border: 10px solid $purple;
+    }
+}
+
+.reveal {
+    background: $purple-dark;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: $font-headings;
+        color: $white;
+    }
+
+    h1 {
+        font-size: 150px;
+
+        small {
+            display: block;
+            margin-top: 20px;
+
+            color: $yellow;
+            font: {
+                family: $font-body;
+                size: 40px;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 100px;
+    }
+}
