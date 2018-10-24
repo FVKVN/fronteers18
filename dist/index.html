@@ -1,3 +1,4 @@
+
 <html>
     <head>
         <link rel="stylesheet" href="./css/style.css" />
@@ -9,6 +10,7 @@
                 <section>
                     <h1>Fronteers conference <small>Amsterdam | 4-5 october 2018</small></h1>
                 </section>
+                <!-- Accassibility start -->
                 <section>
                     <section data-background-image="https://media.giphy.com/media/80mXWlPqTSU1y/giphy.gif">
                         <h2>Accessibility</h2>
@@ -59,14 +61,72 @@ a:focus-visible {
                         <h3>Only one &lt;h1&gt; per page.</h3>
                     </section>
                     <section>
+                        <h3>Semantically correct html goes a long way</h3>
+                    </section>
+                    <section data-background-image="http://31.media.tumblr.com/db361cf4fc9022cb66271ae31fc49d25/tumblr_n5dfofC4FJ1tq4of6o1_500.gif">
+                        <h3>Obviously</h3>
+                    </section>
+                    <section>
                         <h3>Do you know why they call it a "Hero" image?</h3>
                     </section>
                     <section>
                         <p>Because the user says:</p>
                         <h3>"Thanks for the pointless 500KB image, you're a fucking hero."</h3>
                     </section>
+                    <section>
+                        <p><a href="https://inclusivedesignprinciples.org">inclusivedesignprinciples.org</a></p>
+                        <p><a href="https://inclusive-components.design">inclusive-components.design</a></p>
+                    </section>
+                    <section>
+                        <h3>display: contents;</h3>
+                        <p>Makes the parent element &quot;dissapear&quot; making it's child elements children of the element the next level up.</p>
+                        <p>Enables you to add elements that are semantically needed but have no layout sense in terms of display:flex; or display: grid;</p>
+                        <p><a href="https://codepen.io/FVKVN/pen/bmQpPE">example</a></p>
+                    </section>
+                    <section>
+                        <h3>Great.. However</h3>
+                        <p>Bug: it strips all semantic DOM references. (people use it as a css reset)</p>
+                        <p><a href="https://codepen.io/FVKVN/pen/ZqmOKx">example</a></p>
+                    </section>
+                    <section>
+                    <pre>
+<code data-trim class="css">
+@media (prefers-reduced-motion: reduce) {
+    // remove animations
+}
+</code>
+                    </pre>
+                    <p>Only in safari</p>
+                    </section>
+                    <section>
+                    <pre>
+<code data-trim class="css">
+@media (light-level: [dim, washed]) {}
+</code>
+                    </pre>
+                    <p>Not suported</p>
+                    </section>
+                    <section>
+                        <pre>
+<code data-trim class="css">
+@media (inverted-colors: none, inverted) {}
+</code>
+                        </pre>
+                        <p>Only in safari</p>
+                    </section>
+                    <section>
+                        <pre>
+<code data-trim class="css">
+    @media (-ms-high-contrast: [active, black-on-white, white-on-black])
+</code>
+                        </pre>
+                    </section>
+                    <section>
+                        <p><a href="https://github.com/evaferreira/fronteers-talk">https://github.com/evaferreira/fronteers-talk</a></p>
+                    </section>
                     
                 </section>
+                <!-- Accassibility end -->
             </div>
         </div>
         <script src="./js/bundle.js"></script>
