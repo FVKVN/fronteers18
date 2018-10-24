@@ -49,6 +49,7 @@
     "yargs": "^7.0.2"
   },
   "dependencies": {
+    "highlight.js": "^9.13.1",
     "reveal.js": "^3.7.0"
   }
 }

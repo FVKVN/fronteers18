@@ -13,6 +13,59 @@
                     <section data-background-image="https://media.giphy.com/media/80mXWlPqTSU1y/giphy.gif">
                         <h2>Accessibility</h2>
                     </section>
+                    <section>
+                        <p>client:</p>
+                        <h3>"WTF is that ugly blue box when I click on stuff?"</h3>
+                    </section>
+                    <section>
+                        <pre>
+<code data-trim class="css">
+*:focus {
+    outline: none !important;
+}
+</code>
+                        </pre>
+                    </section>
+                    <section data-background-image="https://media.tenor.com/images/258addfe3528543124a9c703da4ccece/tenor.gif">
+                    </section>
+                    <section>
+                        <h3>Always provide a focus state that visually differs from the normal state</h3>
+                    </section>
+                    <section>
+                    <h3>:focus-visible</h3>
+                    <pre>
+<code data-trim class="css">
+:root {
+  --focus-gold: #ffbf47;
+}
+
+:focus-visible  {
+  outline: 3px solid var(--focus-gold);
+}
+
+a:focus-visible {
+  background-color: var(--focus-gold);
+}
+</code>
+                    </pre>
+                    <article>
+                        <h4>From the CSS spec:</h4>
+                        <p>The :focus-visible pseudo-class applies while an element matches the :focus pseudo-class and the user agent determines via heuristics that the focus should be made evident on the element.</p>
+                        <p><a href="https://github.com/WICG/focus-visible">Pollyfill</a></p>
+                    </article>
+
+                    </section>
+                    <section>
+                        <h3>Only one &lt;h1&gt; per page.</h3>
+                    </section>
+                    <section>
+                        <h3>Do you know why they call it a "Hero" image?</h3>
+                    </section>
+                    <section>
+                        <p>Because the user says:</p>
+                        <h3>"Thanks for the pointless 500KB image, you're a fucking hero."</h3>
+                    </section>
+                    
                 </section>
             </div>
         </div>

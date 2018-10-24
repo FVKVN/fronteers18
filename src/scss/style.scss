@@ -10,6 +10,7 @@
 @import "reset";
 @import "reveal";
 @import "config";
+@import "highlight";
 
 * {
     box-sizing: border-box;
@@ -49,12 +50,52 @@ body {
 }
 
 .reveal {
+    padding: 24px;
+
     background: $purple-dark;
+
+    .controls .controls-arrow {
+        &:before,
+        &:after {
+            background-color: $purple;
+        }
+    }
+
+    &:after {
+        content: '';
+
+        position: absolute;
+
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+
+        border: {
+            top: 10px solid $yellow;
+            left: 10px solid $yellow;
+            right: 10px solid $yellow;
+        }
+    }
+
+    .progress {
+        height: 10px;
+
+        background: rgba($yellow, .2);
+
+        span {
+            background: $yellow;
+        }
+    }
 
     h1,
     h2,
     h3,
     h4 {
+        margin-bottom: 20px;
+
         font-family: $font-headings;
         color: $white;
     }
@@ -76,5 +117,34 @@ body {
 
     h2 {
         font-size: 100px;
+    }
+
+    h3 {
+        font-size: 70px;
+    }
+
+    h4 {
+        font-size: 30px;
+    }
+
+    p {
+        margin-bottom: 20px;
+
+        color: $white;
+        line-height: 1.5;
+        font: {
+            family: $font-body;
+            size: 20px;
+        }
+    }
+
+    a {
+        color: $yellow;
+    }
+
+    code {
+        width: 70%;
+        margin: 0 auto;
+        padding: 20px 50px;
     }
 }
